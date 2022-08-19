@@ -1,11 +1,13 @@
 @import './include/colors';
+@import './include/fonts';
 
 // Base
 
 body {
 	margin: 0;
 	background-color: $dark_1;
-	font-family: 'Inter', 'system-ui', sans-serif;
+	color: #fff;
+	font-family: 'Bellota Text', 'system-ui', sans-serif;
 }
 
 * {
