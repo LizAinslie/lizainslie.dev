@@ -1,0 +1,18 @@
+@import './include/colors';
+
+// Base
+
+body {
+	margin: 0;
+	background-color: $dark_1;
+	font-family: 'Inter', 'system-ui', sans-serif;
+}
+
+* {
+	box-sizing: content-box;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
