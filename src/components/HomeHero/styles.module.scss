@@ -6,7 +6,7 @@
 		z-index: 200;
 
 		.heroContentInner {
-			@apply flex items-center;
+			@apply flex items-center flex-col md:flex-row p-2 md:p-0;
 		}
 
 		.bottomBtn {
