@@ -199,7 +199,6 @@ class Animation {
     }
     
     start() {
-        console.log('a')
         requestAnimationFrame(this.loop);
     }
 }
