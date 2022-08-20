@@ -17,6 +17,10 @@
 		&.brand {
 			@apply font-display text-3xl font-bold p-0 mr-2 inline-flex;
 		}
+
+		&.social {
+			@apply px-2;
+		}
 	}
 
 	.mobileToggle {
