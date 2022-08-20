@@ -1,11 +1,21 @@
 @import '../../styles/include/colors';
 
 .nav {
-	display: flex;
-	align-items: center;
-	padding: 1rem 2rem;
+	@apply flex items-center py-2 px-4;
+	
+	.item {
+		@apply text-opacity-75 text-white p-2 text-lg;
 
-	.brand {
-		
+		&:not(:first-of-type) {
+			@apply ml-2;
+		}
+
+		&.brand {
+			@apply font-display text-3xl font-bold p-0 mr-2;
+		}
+
+		&:hover {
+			@apply text-opacity-100;
+		}
 	}
 }

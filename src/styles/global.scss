@@ -1,19 +1,15 @@
 @import './include/colors';
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 // Base
 
 body {
-	margin: 0;
-	background-color: $dark_1;
-	color: #fff;
-	font-family: 'Bellota Text', 'system-ui', sans-serif;
+	@apply m-0 text-white font-body bg-dark-100;
 }
 
 * {
-	box-sizing: content-box;
-}
-
-img {
-	max-width: 100%;
-	height: auto;
+	@apply box-content;
 }
