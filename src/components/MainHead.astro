@@ -1,8 +1,9 @@
 ---
 import '../styles/global.scss';
 const {
-	title = 'Jeanine White: Personal Site',
-	description = 'The personal site of Jeanine White',
+	title = 'Liz Ainslie',
+	description = '',
+	color = '#2d333b'
 } = Astro.props;
 ---
 
@@ -11,11 +12,15 @@ const {
 <meta name="viewport" content="width=device-width" />
 <meta name="generator" content={Astro.generator} />
 <title>{title}</title>
-
+<meta name="theme-color" content={color} />
 <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
-	href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700;900&display=swap"
+	href="https://fonts.googleapis.com/css2?family=Bellota+Text&display=swap"
+	rel="stylesheet"
+/>
+<link
+	href="https://fonts.googleapis.com/css2?family=Bellota&display=swap"
 	rel="stylesheet"
 />
