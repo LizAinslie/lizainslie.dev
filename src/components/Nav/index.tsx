@@ -4,17 +4,26 @@ import styles from './styles.module.scss';
 interface INavProps {
 	color?: string;
 	showBrand?: boolean;
+	fixed?: boolean;
 }
 
 const Nav: FC<INavProps> = ({
 	color = '#2d333b',
-	showBrand = true
+	showBrand = true,
+	fixed = false,
 }: INavProps) => {
 	return (
 		<nav
 			className={styles.nav}
 			style={{
 				backgroundColor: color,
+				...(fixed ? {
+					position: 'fixed',
+					top: 0,
+					left: 0,
+					right: 0,
+					zIndex: '300'
+				} : {})
 			}}
 		>
 			{showBrand ? 
