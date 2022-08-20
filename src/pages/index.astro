@@ -2,6 +2,7 @@
 // Component Imports
 import MainHead from '../components/MainHead.astro';
 import NavHero from '../components/NavHero/index.jsx';
+import HomeHero from '../components/HomeHero/index.jsx';
 
 // Data Fetching: List all Markdown posts in the repo.
 const projects = await Astro.glob('./projects/**/*.md');
@@ -17,23 +18,9 @@ const featuredProject = projects[0];
 	</head>
 	<body>
 		<NavHero color='#dc3545'>
-			<div class="flex flex-col items-center justify-center h-full relative">
-				<div class="flex items-center">
-					<img src="/pfp.png" alt="My profile pic" class="w-80 h-80 rounded-full">
-					<div class="flex flex-col ml-8">
-						<h1 class="text-8xl font-display">Liz Ainslie</h1>
-						<p class="text-3xl">Freelance & Hobbyist Full Stack Developer</p>
-					</div>
-				</div>
-
-				<a
-					href='/about'
-					id="aboutBtn"
-					class="absolute bottom-4 left-1/2 translate-x-[-50%] py-2 px-4 text-xl rounded-full bg-opacity-25 bg-white hover:bg-opacity-50 ease-in-out transition-colors duration-300"
-				>
-					About me
-				</a>
-			</div>
+			<HomeHero />
 		</NavHero>
+
+		<script is:inline async src="/animation.js"></script>
 	</body>
 </html>
