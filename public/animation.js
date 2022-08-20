@@ -131,8 +131,10 @@ class Animation {
 
         this.resizeCanvas();
         window.onresize = () => this.resizeCanvas();
+
+        const amountSprites = window.matchMedia("(min-width: 768px)").matches ? 50 : 20;
         
-        this.initSprites();
+        this.initSprites(amountSprites);
     }
 
     initSprites(amount = 50) {

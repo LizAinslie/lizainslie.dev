@@ -4,18 +4,22 @@
 	@apply flex items-center py-2 px-4;
 	
 	.item {
-		@apply text-opacity-75 text-white p-2 text-lg;
+		@apply text-opacity-75 text-white p-2 text-lg hidden md:inline-flex;
 
 		&:not(:first-of-type) {
 			@apply ml-2;
 		}
 
 		&.brand {
-			@apply font-display text-3xl font-bold p-0 mr-2;
+			@apply font-display text-3xl font-bold p-0 mr-2 inline-flex;
 		}
 
 		&:hover {
 			@apply text-opacity-100;
 		}
+	}
+
+	.mobileToggle {
+		@apply inline-flex mr-2 md:hidden;
 	}
 }

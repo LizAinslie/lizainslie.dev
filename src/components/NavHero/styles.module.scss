@@ -1,5 +1,5 @@
 .navHero {
-	@apply h-screen w-full flex flex-col;
+	@apply min-h-screen h-screen w-full flex flex-col;
 
 	.content {
 		@apply flex-grow bg-dark-200;
