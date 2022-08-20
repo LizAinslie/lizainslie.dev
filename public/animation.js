@@ -23,9 +23,10 @@ class Sprite {
     }
     
     update() {
+        const speed = 70;
         // move down and to the left
-        this.x -= 70 * Delta.deltaTime;
-        this.y += 70 * Delta.deltaTime;
+        this.x -= speed * Delta.deltaTime;
+        this.y += speed * Delta.deltaTime;
     }
 }
 
@@ -144,8 +145,8 @@ class Animation {
         const sideChance = Math.random() < 0.5; // 50/50 chance of true/false
         let x, y;
         if (sideChance) { // x, y on right
-            x = this.canvas.width;
-            y = randInt(-100, this.canvas.height - 100);
+            x = this.canvas.width + 100;
+            y = randInt(-100, this.canvas.height - 200);
         } else { // x, y on top
             x = randInt(0, this.canvas.width);
             y = -100;
