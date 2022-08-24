@@ -31,12 +31,15 @@ const Nav: FC<INavProps> = ({
 					Liz Ainslie
 				</a>
 			: ''}
+			
 			<a className={styles.item} href="/projects">
 				Projects
 			</a>
+
 			<a className={styles.item} href="/blog">
 				Blog
 			</a>
+
 			<a className={styles.item} href="/about">
 				About
 			</a>

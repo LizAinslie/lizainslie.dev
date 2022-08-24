@@ -3,10 +3,6 @@
 import MainHead from '../components/MainHead.astro';
 import NavHero from '../components/NavHero/index.jsx';
 import HomeHero from '../components/HomeHero/index.jsx';
-
-// Data Fetching: List all Markdown posts in the repo.
-const projects = await Astro.glob('./projects/**/*.md');
-const featuredProject = projects[0];
 ---
 
 <html lang="en">
@@ -18,7 +14,7 @@ const featuredProject = projects[0];
 		/>
 	</head>
 	<body>
-		<NavHero color='transparent' fixedNav>
+		<NavHero color='transparent' fixedNav full>
 			<HomeHero />
 		</NavHero>
 

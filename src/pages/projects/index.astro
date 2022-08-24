@@ -1,0 +1,44 @@
+---
+import MainHead from '../../components/MainHead.astro';
+import Nav from '../../components/Nav';
+import NavHero from '../../components/NavHero';
+import ProjectCard from '../../components/ProjectCard/index.jsx';
+
+interface ProjectFrontmatter {
+  title: string;
+  url: string;
+  client?: string;
+  github?: string;
+  description?: string;
+  image?: string;
+  tags?: string[];
+}
+
+const allProjects = await Astro.glob<ProjectFrontmatter>('./*.md');
+const featuredProject = allProjects[1];
+---
+
+<html lang="en">
+    <head>
+        <MainHead
+			title="Projects | Liz Ainslie"
+			description="Liz Ainslie: Freelance & Hobbyist Full Stack Developer"
+		/>
+    </head>
+    <body>
+        <NavHero>
+            <div class="py-32 flex flex-col items-center text-center topography" style="fill: #1e2329;">
+                <h1 class="font-display text-6xl font-light text-white">Projects</h1>
+                <p class="text-2xl mt-4 text-white">Things I am, or have been working on.</p>
+            </div>
+        </NavHero>
+
+        <div class="container mx-auto py-8">
+            <div class="grid grid-cols-2 gap-8">
+                {allProjects.map(project => (
+                    <ProjectCard {...project.frontmatter} />
+                ))}
+            </div>
+        </div>
+    </body>
+</html>
