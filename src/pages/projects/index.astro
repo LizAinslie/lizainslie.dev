@@ -1,4 +1,5 @@
 ---
+import Footer from '../../components/Footer';
 import MainHead from '../../components/MainHead.astro';
 import Nav from '../../components/Nav';
 import NavHero from '../../components/NavHero';
@@ -15,7 +16,6 @@ interface ProjectFrontmatter {
 }
 
 const allProjects = await Astro.glob<ProjectFrontmatter>('./*.md');
-const featuredProject = allProjects[1];
 ---
 
 <html lang="en">
@@ -28,8 +28,8 @@ const featuredProject = allProjects[1];
     <body>
         <NavHero>
             <div class="py-32 flex flex-col items-center text-center topography" style="fill: #1e2329;">
-                <h1 class="font-display text-6xl font-light text-white">Projects</h1>
-                <p class="text-2xl mt-4 text-white">Things I am, or have been working on.</p>
+                <h1 class="font-display text-6xl font-light text-white">My Projects</h1>
+                <p class="text-2xl mt-4 text-white">Websites, music & content that I make.</p>
             </div>
         </NavHero>
 
@@ -40,5 +40,7 @@ const featuredProject = allProjects[1];
                 ))}
             </div>
         </div>
+
+        <Footer />
     </body>
 </html>
