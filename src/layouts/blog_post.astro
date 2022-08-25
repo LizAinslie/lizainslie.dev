@@ -1,5 +1,46 @@
 ---
-const { frontmatter } = Astro.props;
+import MainHead from '../components/MainHead.astro';
+import NavHero from '../components/NavHero/index.jsx';
+import readingTime from 'reading-time';
+import Footer from '../components/Footer';
+import dateFormat from 'dateformat';
+
+const { frontmatter, headings, compiledContent } = Astro.props;
+const readTime = readingTime(compiledContent());
+console.log(compiledContent());
 ---
 
+<html lang={'en'}>
+	<head>
+		<MainHead 
+			title={`${frontmatter.title} | Liz Ainslie`}
+			description={frontmatter.summary}
+		/>
+	</head>
+	<body>
+        <NavHero>
+            <div class="py-32 flex flex-col items-center text-center topography" style="fill: #1e2329;">
+                <h1 class="font-display text-6xl font-light text-white">{frontmatter.title}</h1>
+                <p class="text-2xl mt-4 text-white">{dateFormat(frontmatter.date, "UTC:mmm d, yyyy")} &middot; {readTime.text}</p>
+                <p class="mt-4 text-gray-400">
+                    {frontmatter.tags.join(' · ')}
+                </p>
+            </div>
+        </NavHero>
 
+		<div class="container mx-auto pt-8">
+			<div class="flex">
+				<article class="content mt-8">
+					<slot />
+				</article>
+				<aside class="hidden lg:block h-screen sticky top-0 min-w-fit max-w-[20%] p-4">
+					<div class="headingLinks">
+						{headings.map(heading => <a class="headingLink" href={`#${heading.slug}`}>{heading.text}</a>)}
+					</div>
+				</aside>
+			</div>
+		</div>
+
+        <Footer />
+	</body>
+</html>
