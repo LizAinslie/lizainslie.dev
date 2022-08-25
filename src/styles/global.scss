@@ -36,6 +36,10 @@ article.content {
 		@apply text-brand hover:underline underline-offset-[6px];
 	}
 
+	p:not(:first-of-type) {
+		@apply mt-6;
+	}
+
 	blockquote {
 		@apply border-l-4 border-dark-300 bg-dark-200 px-4 py-2;
 	}
@@ -44,10 +48,14 @@ article.content {
 		@apply p-4 rounded-lg;
 	}
 
+	code {
+		@apply bg-dark-300 rounded-sm p-1;
+	}
+
 	ul {
 		@apply list-disc pl-8;
 		
-		&:not(:first-child) {
+		&:not(:first-child), > li:not(:first-child) {
 			@apply mt-2;
 		}
 	}
