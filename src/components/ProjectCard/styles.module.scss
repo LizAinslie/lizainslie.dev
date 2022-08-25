@@ -1,5 +1,5 @@
 .projectCard {
-    @apply rounded-2xl aspect-video relative;
+    @apply rounded-2xl aspect-video relative flex;
 
     .preview {
         @apply rounded-2xl absolute top-0 left-0 bottom-0 right-0 w-full h-full border-none;

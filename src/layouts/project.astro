@@ -1,12 +1,32 @@
 ---
 import MainHead from '../components/MainHead.astro';
-const { content } = Astro.props;
+import Nav from '../components/Nav';
+import ProjectCard from '../components/ProjectCard';
+const { frontmatter, headings } = Astro.props;
+console.log(headings)
 ---
 
-<html lang={content.lang || 'en'}>
+<html lang={'en'}>
 	<head>
-		<MainHead title={content.title} description={content.description} />
+		<MainHead 
+			title={frontmatter.title}
+			description={frontmatter.description}
+		/>
 	</head>
 	<body>
+		<Nav />
+		<div class="container mx-auto py-8">
+			<ProjectCard {...frontmatter} />
+			<div class="flex">
+				<article class="content mt-8">
+					<slot />
+				</article>
+				<aside class="h-screen sticky top-0 min-w-fit max-w-[20%] p-4">
+					<div class="headingLinks">
+						{headings.map(heading => <a class="headingLink" href={`#${heading.slug}`}>{heading.text}</a>)}
+					</div>
+				</aside>
+			</div>
+		</div>
 	</body>
 </html>

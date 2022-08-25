@@ -3,27 +3,34 @@ import styles from './styles.module.scss';
 
 interface IProjectCardProps {
     title: string;
-    url: string;
+    site: string;
 	description?: string;
 	client?: string;
     github?: string;
     image?: string;
     tags?: string[];
+    link?: string;
 }
 
-const ProjectCard: FC<IProjectCardProps> = ({ title, url, description, client, github, tags, image }: IProjectCardProps) => {
+const ProjectCard: FC<IProjectCardProps> = ({ title, site, description, client, github, tags, image, link }: IProjectCardProps) => {
 	return (
 		<div className={styles.projectCard}>
             {image ? <>
                 <img className={styles.preview} src={image} alt={title} />
             </> : <>
-                <iframe className={styles.preview} src={url} title={title}></iframe>
+                <iframe className={styles.preview} src={site} title={title}></iframe>
             </> }
             <div className={styles.overlay}>
                 <div className={styles.inner}>
-                    <a href={url} rel='noreferrer noopener' target='_blank' className={styles.visitBtn}>
-                        View Project
-                    </a>
+                    {link ? 
+                        <a href={link} className={styles.visitBtn}>
+                            View Project Page
+                        </a>
+                    :
+                        <a href={site} rel='noreferrer noopener' target='_blank' className={styles.visitBtn}>
+                            Open Project in New Tab
+                        </a>
+                    }
 
                     <div className={styles.info}>
                         <div className={styles.paragraph}>
