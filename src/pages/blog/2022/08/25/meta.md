@@ -8,7 +8,6 @@ tags:
   - tech
 ---
 
-# Why I still deadname "Meta"
 People often ask why I still use the name "Facebook" for what is now Meta. There
 are a few key reasons I don't feel like the company is justified in their change
 of name.
