@@ -7,7 +7,6 @@ import dateFormat from 'dateformat';
 
 const { frontmatter, headings, compiledContent } = Astro.props;
 const readTime = readingTime(compiledContent());
-console.log(compiledContent());
 ---
 
 <html lang={'en'}>
@@ -28,9 +27,9 @@ console.log(compiledContent());
             </div>
         </NavHero>
 
-		<div class="container mx-auto pt-8">
+		<div class="container mx-auto pt-8 md:pt-12">
 			<div class="flex">
-				<article class="content mt-8">
+				<article class="content mb-12">
 					<slot />
 				</article>
 				<aside class="hidden lg:block h-screen sticky top-0 min-w-fit max-w-[20%] p-4">

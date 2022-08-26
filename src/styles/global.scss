@@ -15,13 +15,13 @@ body {
 }
 
 article.content {
-	@apply flex-grow p-4 leading-relaxed text-lg;
+	@apply flex-grow p-4 leading-loose text-lg;
 
 	h1, h2, h3, h4, h5, h6 {
 		@apply mb-2;
 
 		&:not(:first-child) {
-			@apply mt-4;
+			@apply mt-16;
 		}
 	}
 
@@ -36,8 +36,8 @@ article.content {
 		@apply text-brand hover:underline underline-offset-[6px];
 	}
 
-	p:not(:first-of-type) {
-		@apply mt-6;
+	p:not(:first-child) {
+		@apply mt-8;
 	}
 
 	blockquote {
@@ -55,7 +55,11 @@ article.content {
 	ul {
 		@apply list-disc pl-8;
 		
-		&:not(:first-child), > li:not(:first-child) {
+		&:not(:first-child) {
+			@apply mt-4;
+		}
+		
+		> li:not(:first-child) {
 			@apply mt-2;
 		}
 	}
