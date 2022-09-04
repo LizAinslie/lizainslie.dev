@@ -14,14 +14,23 @@ body {
 	@apply box-border;
 }
 
+section.resumeSection {
+	@apply flex flex-col lg:flex-row mt-8;
+
+}
+
 article.content {
 	@apply flex-grow p-4 leading-loose text-lg;
 
 	h1, h2, h3, h4, h5, h6 {
 		@apply mb-2;
 
-		&:not(:first-child) {
+		&:not(:first-child):not(.noMargin) {
 			@apply mt-16;
+		}
+
+		> a {
+			@apply text-white
 		}
 	}
 
@@ -36,7 +45,7 @@ article.content {
 		@apply text-brand hover:underline underline-offset-[6px];
 	}
 
-	p:not(:first-child) {
+	p:not(:first-child):not(.noMargin) {
 		@apply mt-8;
 	}
 
@@ -82,6 +91,31 @@ article.content {
 
 	&:not(:first-of-type) {
 		@apply border-t-[1px] border-dark-300;
+	}
+}
+
+details {
+	user-select: none;
+	& summary svg {
+		transform: rotate(90deg);
+	}
+}
+details[open] {
+	& summary svg {
+	  	transform: rotate(-90deg);  
+	}
+}
+  
+  
+details[open] summary ~ * {
+	animation: ease-opacity-t-b .5s ease
+}
+  
+summary {
+	cursor: pointer;
+	
+	svg {
+		transition: all 0.3s;
 	}
 }
 

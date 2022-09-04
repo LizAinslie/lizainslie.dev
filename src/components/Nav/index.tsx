@@ -43,6 +43,10 @@ const Nav: FC<INavProps> = ({
 			<a className={styles.item} href="/about">
 				About
 			</a>
+
+			<a className={styles.item} href="/resume">
+				Resume
+			</a>
 			
 			<div className="flex-grow" />
 

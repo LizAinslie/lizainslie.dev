@@ -1,0 +1,233 @@
+---
+import Footer from '../components/Footer';
+import MainHead from '../components/MainHead.astro';
+import NavHero from '../components/NavHero';
+---
+
+<html lang="en">
+	<head>
+		<MainHead title="Resume | Liz Ainslie" description="My Web Resume" />
+	</head>
+	<body>
+		<NavHero>
+            <div class="py-32 flex flex-col items-center text-center topography" style="fill: #a52834;">
+                <h1 class="font-display text-6xl font-light text-white">Hi, I'm Lizzy! 👋</h1>
+                <p class="text-2xl mt-4 text-white">And this is my Resume.</p>
+            </div>
+        </NavHero>
+
+        <article class="container mx-auto my-12 content">
+			<h2>Values</h2>
+            <p>
+                I am a goal oriented, laid-back, honest person, and I'm looking for
+                a position where I can make a difference in the industry. When
+                my career is finished and I decide to retire, I want to become
+                a professor at a local college and help usher in a new
+                generation of software engineers. I'm a fast and willing learner
+                and love learning about new tech.
+            </p>
+			<h2>Education</h2>
+			<section class="resumeSection">
+                <img class="self-start w-24 aspect-square rounded-full mb-8 lg:mr-4" src="/assets/kickapoo.png">
+                <div class="flex flex-col">
+                    <span class="text-gray-400">August 2017 - May 2020</span>
+                    <h3 class="mt-4 noMargin"><a href="https://www.sps.org/Kickapoo/AboutUs" target="_blank" rel="nofollow noreferrer">Kickapoo High School</a></h3>
+                    <p>
+                        I attended Kickapoo High School in Springfield, Missouri
+                        between 2017 and 2020. While I was there I recieved my
+                        high school diploma and participated in the school's
+                        computer programming club, run by the CS teacher, Scott
+                        Neeman. I participated in the A+ program which required
+                        me to tutor classes, so I tutored Intro to CS for Mr.
+                        Neeman.
+                    </p>
+
+                    <p>
+                        During my time in the computer programming club we
+                        participated in many local and state competitions. In
+                        2018, we participated and placed 3rd in Springfield's
+                        annual Hack4Good competition. Later that year, Our team
+                        placed 4th in the statewide <a href="https://www.more.net/professional-development/missouri-high-school-cyber-security-challenge" target="_blank" rel="nofollow noreferrer">MORENet cybersecurity challenge</a>,
+                        and we met Governor Mike Parson after the challenge.
+                    </p>
+
+                    <p>
+                        In early 2019, we went to the <a href="https://www.sbuniv.edu/" target="_blank" rel="nofollow noreferrer">SBU</a>
+                        competition in Bolivar. There were some technical
+                        difficulties with the judge software so nobody did very
+                        well, but we still enjoyed our time there. The same year,
+                        we attended Hack4Good again and placed 5th.
+                    </p>
+                </div>
+            </section>
+            <section class="resumeSection">
+                <img class="self-start w-24 aspect-square rounded-md mb-8 lg:mr-4" src="/assets/otc.jpg">
+                <div class="flex flex-col">
+                    <span class="text-gray-400">August 2019 - January 2020</span>
+                    <h3 class="mt-4 noMargin"><a href="https://www.otc.edu/" target="_blank" rel="nofollow noreferrer">Ozarks Technical Community College</a></h3>
+                    <p>
+                        I spent a semester of my senior year in high school
+                        attending OTC, a local community college in the
+                        mornings. I took three CS classes as part of a school
+                        program where I earned dual credit.
+                    </p>
+                </div>
+            </section>
+
+            <h2>Work Experience</h2>
+            <p>
+                I spent the time between May 2020 and October 2021 working small
+                jobs at local stores to pay my bills and fuel my personal
+                projects, most of which are <a href="https://github.com/LizAinslie" target="_blank" rel="nofollow noreferrer">open source</a>.
+                I also spent this time figuring out my identity and dealing with
+                some personal mental health problems.
+            </p>
+
+            <section class="resumeSection">
+                <img class="self-start w-24 aspect-square rounded-md mb-8 lg:mr-4" src="/assets/studioarchetype.png">
+                <div class="flex flex-col">
+                    <span class="text-gray-400">October 2021 - Current</span>
+                    <h3 class="mt-4 noMargin">Client Work via Studio Archetype</h3>
+                    <p>
+                        In October of 2021 I signed a contract set up by a close
+                        personal friend to do some web development for <a href="https://studioarchetype.net" target="_blank" rel="nofollow noreferrer">Studio Archetype</a>
+                        and <a href="https://continuum.graphics" target="_blank" rel="nofollow noreferrer">Continuum Graphics</a>.
+                        So far this has been a good fit, but I encountered some
+                        housing issues in Missouri so i moved to Arizona to be
+                        closer to work and I'm finding this is less good of a
+                        fit for me as it initially seemed, so I'm looking for a
+                        more traditional remote job where I'm valued a bit
+                        better.
+                    </p>
+                </div>
+            </section>
+
+            <h2>Skills</h2>
+            <p>
+                I have a lot of different interests and as such, I've learned a
+                lot in my time writing software. I can write a full-stack
+                application and deploy it alone, along with its dependencies,
+                such as databases. Below is a breakdown of the different
+                technologies I'm familiar with.
+            </p>
+
+            <section class="mt-8 flex flex-col lg:flex-row w-full gap-16">
+                <div class="flex flex-col w-full">
+                    <h3>Backend & Systems</h3>
+                    <h4 class="mt-2 noMargin">Languages</h4>
+                    <p class="mt-2 noMargin">
+                        I'm a very capable programmer in backend and desktop
+                        scenarios. I've known Java since I was 10 and I
+                        consistently use Kotlin to write API services. I also
+                        use Java/Kotlin to mod games and write desktop software.
+                    </p>
+                    <p class="mt-2 noMargin">
+                        I'm also very skilled using Node to write API services
+                        and have been doing so for nearly five years. I know
+                        Electron well but prefer other solutions to desktop
+                        software like C++ or Java.
+                    </p>
+                    <p class="mt-2 noMargin">
+                        I know C and C++ fairly well, and have used them in some
+                        desktop software, as well as to write my own languages.
+                        I know how to use the QT libraries to write maintainable
+                        user interfaces in C++ or QML. I've also been working on
+                        my own operating systems in my free time, which involves
+                        mostly C and Assembly.
+                    </p>
+                    <p class="mt-2 noMargin">
+                        I have minor experience with Golang, and I've used Dart
+                        substantially. I have experience with Python and Ruby,
+                        and have used Python to build APIs in the past. I'm also
+                        interested in learning Elixir or Erlang.
+                    </p>
+
+                    <h4 class="mt-6 noMargin">Libraries & Frameworks</h4>
+                    <p class="mt-2 noMargin">
+                        I'm familiar with many Kotlin and Java libraries
+                        including Lombok, SLF4J, Spark, Ktor, and the Kotlinx
+                        tools. I am capable of writing serialization strategies
+                        with GSON, Jackson, and Kotlinx Serialization. I know
+                        how to build user interfaces with Jetpack Compose and
+                        Swing/AWT.
+                    </p>
+                    <p class="mt-2 noMargin">
+                        I can effectively use the Android SDK to build complex
+                        mobile apps as well as Flutter for cross platform apps.
+                        I can also use Ionic and Capacitor to build apps, and
+                        these technologies are the first ones I used to do so.
+                    </p>
+                    <p class="mt-2 noMargin">
+                        I've been using Express and related libraries to build
+                        NodeJS APIs for 4 years, and I know how to utilize
+                        Database connectors like Prisma and Mongoose in this
+                        kind of software.
+                    </p>
+                </div>
+                <div class="flex flex-col w-full">
+                    <h3 class="inline-block">Frontend & Design</h3>
+                    <h4 class="mt-2 noMargin">JS Frameworks</h4>
+                    <p class="mt-2 noMargin">
+                        I'm familiar with React, Vue, Next, and Astro, and these
+                        technologies make up most of the projects I've worked
+                        on. I also know how to integrate libraries like Redux,
+                        Pinia, VueX for state management, and I can pick up
+                        libraries for other things easily. I'm good at making
+                        canvas and WebGL animations, too.
+                    </p>
+
+                    <h4 class="mt-2 noMargin">CSS Frameworks</h4>
+                    <p class="mt-2 noMargin">
+                        I've used Bootstrap, Semantic UI, Bulma, and Tailwind in
+                        all sorts of software I have written, and I'm
+                        comfortable writing my own styles when the project calls
+                        for it.
+                    </p>
+                    
+                    <h4 class="mt-6 noMargin">Languages</h4>
+                    <p class="mt-2 noMargin">
+                        I know TypeScript and JavaScript and have been using
+                        them for close to 5 years now. I know many templating
+                        languages, including Pug and Handlebars, and have used
+                        both Sass/SCSS and Less to render stylesheets in a
+                        production capacity for 4 years.
+                    </p>
+                </div>
+                <div class="flex flex-col w-full">
+                    <h3 class="inline-block">Linux & IT</h3>
+                    <h4 class="mt-2 noMargin">Distros:</h4>
+                    <ul>
+                        <li>Arch Linux</li>
+                        <li>Ubuntu</li>
+                    </ul>
+
+                    <h4 class="mt-6 noMargin">Tools:</h4>
+                    <ul>
+                        <li>Systemd</li>
+                        <li>PM2</li>
+                        <li>Top/HTop/BTop</li>
+                    </ul>
+
+                    <h4 class="mt-6 noMargin">Databases:</h4>
+                    <ul>
+                        <li>MongoDB</li>
+                        <li>RethinkDB</li>
+                        <li>Redis</li>
+                        <li>PostgreSQL</li>
+                        <li>MariaDB</li>
+                    </ul>
+                    
+                    <h4 class="mt-6 noMargin">Cloud Providers:</h4>
+                    <ul>
+                        <li>Cloudflare</li>
+                        <li>AWS</li>
+                        <li>DigitalOcean</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+            </section>
+		</article>
+
+		<Footer />
+	</body>
+</html>
