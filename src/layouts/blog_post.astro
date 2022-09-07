@@ -5,8 +5,8 @@ import readingTime from 'reading-time';
 import Footer from '../components/Footer';
 import dateFormat from 'dateformat';
 
-const { frontmatter, headings, compiledContent } = Astro.props;
-const readTime = readingTime(compiledContent());
+const { frontmatter, headings, rawContent } = Astro.props;
+const readTime = readingTime(rawContent());
 ---
 
 <html lang={'en'}>
