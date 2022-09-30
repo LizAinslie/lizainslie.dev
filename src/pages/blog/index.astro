@@ -33,15 +33,19 @@ const allPosts = await Astro.glob<ProjectFrontmatter>('./**/*.md');
 
         <div class="container mx-auto py-8">
             <div class="flex flex-col">
-                {allPosts.sort((a, b) => a.frontmatter.date.getMilliseconds() - b.frontmatter.date.getMilliseconds()).map(post => (
-                    <div class="postItem">
-                        <h2 class="text-3xl"><a href={post.url} class="hover:underline">{post.frontmatter.title}</a></h2>
-                        {post.frontmatter.summary && (<p class="mt-2 leading-relaxed">{post.frontmatter.summary}</p>)}
-                        <p class="mt-4 text-gray-400">
-                            {dateFormat(post.frontmatter.date, "UTC:mmm d, yyyy")} &middot; {post.frontmatter.tags.join(', ')}
-                        </p>
-                    </div>
-                ))}
+                {allPosts
+                    .sort((a, b) => new Date(a.frontmatter.date).getMilliseconds() - new Date(b.frontmatter.date).getMilliseconds())
+                    .reverse()
+                    .map(post => (
+                        <div class="postItem">
+                            <h2 class="text-3xl"><a href={post.url} class="hover:underline">{post.frontmatter.title}</a></h2>
+                            {post.frontmatter.summary && (<p class="mt-2 leading-relaxed">{post.frontmatter.summary}</p>)}
+                            <p class="mt-4 text-gray-400">
+                                {dateFormat(post.frontmatter.date, "UTC:mmm d, yyyy")} &middot; {post.frontmatter.tags.join(', ')}
+                            </p>
+                        </div>
+                    ))
+                }
             </div>
         </div>
 
