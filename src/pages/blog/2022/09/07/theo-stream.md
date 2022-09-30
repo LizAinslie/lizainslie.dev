@@ -9,6 +9,8 @@ tags:
   - theo
 ---
 
+**Note: This is a draft I never finished. Some important topics may be left out.**
+
 Today [on stream][theo_stream], Theo talks with [Sam][pscale_sam] from
 [Planetscale][pscale] about scalability and performance in serverless database
 solutions like Planetscale.
