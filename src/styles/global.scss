@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+	.char-80 {
+		max-width: 80ch;
+	}
+}
+
 // Base
 
 body {
@@ -19,7 +25,7 @@ section.resumeSection {
 
 }
 
-article.content {
+.content {
 	@apply flex-grow p-4 leading-loose text-lg;
 
 	h1, h2, h3, h4, h5, h6 {
@@ -45,16 +51,20 @@ article.content {
 		@apply text-brand hover:underline underline-offset-[6px];
 	}
 
-	p:not(:first-child):not(.noMargin) {
-		@apply mt-8;
+	p {
+		@apply char-80;
+
+		:not(:first-child):not(.noMargin) {
+			@apply mt-8;
+		}
 	}
 
 	blockquote {
-		@apply border-l-4 border-dark-300 bg-dark-200 px-4 py-2;
+		@apply border-l-4 border-dark-300 bg-dark-200 px-4 py-2 char-80;
 	}
 
 	pre.astro-code {
-		@apply p-4 rounded-lg;
+		@apply p-4 rounded-lg char-80;
 	}
 
 	code {
@@ -62,7 +72,7 @@ article.content {
 	}
 
 	ul {
-		@apply list-disc pl-8;
+		@apply list-disc pl-8 char-80;
 		
 		&:not(:first-child) {
 			@apply mt-4;
@@ -71,6 +81,14 @@ article.content {
 		> li:not(:first-child) {
 			@apply mt-2;
 		}
+	}
+
+	table {
+		@apply char-80;
+	}
+
+	img {
+		@apply char-80;
 	}
 }
 
