@@ -25,7 +25,7 @@ section.resumeSection {
 
 }
 
-.content {
+article.content {
 	@apply flex-grow p-4 leading-loose text-lg;
 
 	h1, h2, h3, h4, h5, h6 {
@@ -54,7 +54,7 @@ section.resumeSection {
 	p {
 		@apply char-80;
 
-		:not(:first-child):not(.noMargin) {
+		&:not(:first-child):not(.noMargin) {
 			@apply mt-8;
 		}
 	}
@@ -88,7 +88,11 @@ section.resumeSection {
 	}
 
 	img {
-		@apply char-80;
+		@apply char-80 rounded-md;
+
+		&:not(::first-child) {
+			@apply mt-8;
+		}
 	}
 }
 
