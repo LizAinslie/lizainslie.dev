@@ -51,8 +51,8 @@ in the first place?
 This seems like an anti-pattern of sorts to me. If you aim to solve a problem
 by replacing a tool people have been using for decades, you need to properly
 replace all of that tool's functions. If it's easier to do something I need to
-do in the tool you're replacing, I'm not going to use your language to do my
-thing. My time and energy are my most valuable assets, please don't waste them.
+do in the tool you're replacing, I'm not going to use your tool to do my thing.
+My time and energy are my most valuable assets, please don't waste them.
 
 ## The Linux Kernel Argument
 Recently Rust has been added to the Linux kernel. With this news, I've seen many
