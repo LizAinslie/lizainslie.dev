@@ -6,7 +6,8 @@
 
 @layer utilities {
 	.char-80 {
-		max-width: 80ch;
+		width: 80ch;
+		max-width: 100%;
 	}
 }
 
@@ -22,11 +23,10 @@ body {
 
 section.resumeSection {
 	@apply flex flex-col lg:flex-row mt-8;
-
 }
 
 article.content {
-	@apply flex-grow p-4 leading-loose text-lg;
+	@apply flex-grow p-4 leading-loose text-lg max-w-[100vw];
 
 	h1, h2, h3, h4, h5, h6 {
 		@apply mb-2;
