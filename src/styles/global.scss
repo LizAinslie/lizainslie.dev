@@ -87,7 +87,7 @@ article.content {
 		@apply char-80;
 	}
 
-	img {
+	> img {
 		@apply char-80 rounded-md;
 
 		&:not(::first-child) {
