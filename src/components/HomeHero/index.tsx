@@ -27,7 +27,7 @@ export default function HomeHero() {
 									<circle cx="9" cy="12" r="1" />
 									<circle cx="15" cy="12" r="1" />
 								</svg>
-								<div className="opacity-0 transition-opacity duration-300" id='discordUserBox'>
+								<div className="opacity-0 transition-opacity duration-300 whitespace-nowrap" id='discordUserBox'>
 									<span id='discordUsername'></span>
 									<span className={styles.discrim} id='discordDiscrim'></span>
 								</div>
