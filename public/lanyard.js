@@ -98,6 +98,10 @@ window.addEventListener("load", () => {
 
             const discrimBox = document.getElementById('discordDiscrim');
             discrimBox.innerText = '#' + presenceData.discord_user.discriminator;
+
+            const discordTagBox = document.getElementById('discordUserBox');
+            discordTagBox.classList.add('opacity-100');
+            discordTagBox.classList.remove('opacity-0');
         },
     });
 });
