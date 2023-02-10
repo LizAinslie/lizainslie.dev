@@ -5,8 +5,10 @@ export default function HomeHero() {
 		<div className={styles.homeHeroWrapper}>
 			<div className={styles.heroContent}>
 				<div className={styles.heroContentInner}>
-					<img src="/pfp.png" alt="My profile pic" className="w-56 md:w-80 h-56 md:h-80 rounded-full" />
-					<div className="flex flex-col items-center md:items-start mt-8 md:mt-0 md:ml-8">
+					<div className="flex-1 flex justify-end">
+						<img src="/pfp.png" alt="My profile pic" className="w-56 md:w-80 h-56 md:h-80 rounded-full" />
+					</div>
+					<div className="flex flex-col flex-1 md:items-start mt-8 md:mt-0 md:ml-8">
 						<h1 className="flex text-6xl md:text-8xl font-display text-center md:text-left items-start">
 							Liz Ainslie
 							<div id='discordBox' className={styles.discordTag}>
@@ -25,8 +27,10 @@ export default function HomeHero() {
 									<circle cx="9" cy="12" r="1" />
 									<circle cx="15" cy="12" r="1" />
 								</svg>
-								<span id='discordUsername'></span>
-								<span className={styles.discrim} id='discordDiscrim'></span>
+								<div className="opacity-0 transition-opacity duration-300 whitespace-nowrap" id='discordUserBox'>
+									<span id='discordUsername'></span>
+									<span className={styles.discrim} id='discordDiscrim'></span>
+								</div>
 							</div>
 						</h1>
 						<p className="text-3xl text-center md:text-left mt-4 md:mt-0">Freelance & Hobbyist Full Stack Developer</p>

@@ -7,7 +7,7 @@
 		z-index: 200;
 
 		.heroContentInner {
-			@apply flex items-center flex-col md:flex-row p-2 md:p-0;
+			@apply flex items-center w-full justify-center md:flex-row p-2 md:p-0;
 		}
 
 		.discordTag {
