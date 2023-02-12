@@ -9,7 +9,7 @@ export default function HomeHero() {
 						<img src="/pfp.png" alt="My profile pic" className="w-56 md:w-80 h-56 md:h-80 rounded-full" />
 					</div>
 					<div className="flex flex-col flex-1 md:items-start mt-8 md:mt-0 md:ml-8">
-						<h1 className="flex text-6xl md:text-8xl font-display text-center md:text-left items-start">
+						<h1 className="flex text-6xl md:text-8xl font-display text-center md:text-left justify-center md:justify-start">
 							Liz Ainslie
 							<div id='discordBox' className={styles.discordTag}>
 								<svg

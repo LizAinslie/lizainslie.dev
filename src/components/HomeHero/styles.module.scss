@@ -7,11 +7,11 @@
 		z-index: 200;
 
 		.heroContentInner {
-			@apply flex items-center w-full justify-center md:flex-row p-2 md:p-0;
+			@apply flex flex-col items-center w-full justify-center md:flex-row p-2 md:p-0;
 		}
 
 		.discordTag {
-			@apply hidden lg:inline-flex px-4 py-2 text-xl rounded-md bg-opacity-25 bg-white text-white ml-2;
+			@apply hidden lg:inline-flex self-start px-4 py-2 text-xl rounded-md bg-opacity-25 bg-white text-white ml-2;
 
 			.discrim {
 				@apply text-gray-100 text-opacity-80;

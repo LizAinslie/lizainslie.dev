@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lizainslie.dev/sitemap-index.xml
