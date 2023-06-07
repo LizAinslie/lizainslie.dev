@@ -2,7 +2,7 @@
 layout: ../../layouts/project.astro
 title: Material You Compass
 site: https://synapsetech.dev/products/compass
-image: /assets/compass_banner.png
+image: /assets/compass_banner_portfolio.png
 github: SynapseTech/Compass
 description: |
   A simple, minimalistic compass for Android that respects your Material You
