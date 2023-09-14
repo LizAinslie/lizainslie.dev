@@ -94,10 +94,7 @@ window.addEventListener("load", () => {
             console.log(presenceData);
 
             const usernameBox = document.getElementById('discordUsername');
-            usernameBox.innerText = presenceData.discord_user.username;
-
-            const discrimBox = document.getElementById('discordDiscrim');
-            discrimBox.innerText = '#' + presenceData.discord_user.discriminator;
+            usernameBox.innerText = '@' + presenceData.discord_user.username;
 
             const discordTagBox = document.getElementById('discordUserBox');
             discordTagBox.classList.add('opacity-100');
