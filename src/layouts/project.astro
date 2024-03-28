@@ -16,7 +16,7 @@ const { frontmatter, headings } = Astro.props;
 	<body>
 		<Nav />
 		<div class="container mx-auto pt-8 md:pt-12">
-			<ProjectCard {...frontmatter} />
+			<div class='px-4'><ProjectCard {...frontmatter} /></div>
 			<div class="flex mt-8">
 				<article class="content mb-12">
 					<slot />
@@ -28,6 +28,6 @@ const { frontmatter, headings } = Astro.props;
 				</aside>
 			</div>
 		</div>
-        <Footer />
+		<Footer />
 	</body>
 </html>

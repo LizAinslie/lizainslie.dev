@@ -1,5 +1,5 @@
 .projectCard {
-    @apply rounded-2xl aspect-video relative flex;
+    @apply rounded-2xl aspect-square md:aspect-video relative flex;
 
     .preview {
         @apply rounded-2xl absolute top-0 left-0 bottom-0 right-0 w-full h-full border-none object-contain;
@@ -16,7 +16,7 @@
             }
 
             .info {
-                @apply justify-self-end flex items-end p-4 absolute bottom-0 left-0 right-0;
+                @apply justify-between flex items-end p-4 absolute bottom-0 left-0 right-0;
 
                 .paragraph {
                     .heading {
@@ -30,10 +30,6 @@
                     .meta {
                         @apply mt-2 text-gray-400 text-sm;
                     }
-                }
-
-                .spacer {
-                    @apply flex-grow;
                 }
 
                 .iconLink {
