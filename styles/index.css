@@ -1,0 +1,14 @@
+.banner-cell {
+    padding: 0;
+    padding-top: 0 !important;
+}
+
+.title-wrap {
+    display: flex;
+    gap: 1rem;
+}
+
+.title-wrap img {
+    width: 4rem;
+    height: auto;
+}
