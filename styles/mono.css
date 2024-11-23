@@ -4,10 +4,10 @@
     --font-family: "JetBrains Mono", monospace;
     --line-height: 1.20rem;
     --border-thickness: 2px;
-    --text-color: #000;
-    --text-color-alt: #666;
-    --background-color: #fff;
-    --background-color-alt: #eee;
+    --text-color: #cdd6f4;
+    --text-color-alt: #a6adc8;
+    --background-color: #11111b;
+    --background-color-alt: #181825;
 
     --font-weight-normal: 500;
     --font-weight-medium: 600;
@@ -19,15 +19,6 @@
     font-style: normal;
     font-variant-numeric: tabular-nums lining-nums;
     font-size: 16px;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --text-color: #fff;
-        --text-color-alt: #aaa;
-        --background-color: #000;
-        --background-color-alt: #111;
-    }
 }
 
 * {
