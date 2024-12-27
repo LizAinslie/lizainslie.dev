@@ -65,3 +65,43 @@ pre.astro-code {
 .copy-text.link:hover {
     text-decoration: underline;
 }
+
+.site-nav {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: var(--line-height);
+}
+
+.site-nav a {
+    border: var(--border-thickness) solid var(--text-color);
+    padding:
+            calc(var(--line-height) / 2 - var(--border-thickness))
+            calc(1ch - var(--border-thickness));
+    margin: 0;
+    cursor: pointer;
+    background-color: var(--background-color);
+    transition: background-color 0.5s;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.site-nav a:hover {
+    background-color: var(--background-color-alt);
+}
+
+.site-nav a.active {
+    border-color: var(--accent);
+    background-color: var(--accent);
+    color: var(--background-color);
+}
+
+.tag.active {
+    color: var(--accent);
+}
+
+.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--line-height);
+}

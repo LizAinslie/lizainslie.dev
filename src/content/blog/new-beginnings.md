@@ -1,8 +1,11 @@
 ---
 title: New Beginnings
 date: 2024-12-26
-description: Welcome to my new blog! I'm excited to share my work
+description: Welcome to my new blog!
 image: /images/banner_blog.png
+tags:
+  - update
+  - testing
 ---
 
 ## Ima use this to test markdown :3

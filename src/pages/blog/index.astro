@@ -1,12 +1,19 @@
 ---
-import BaseHead from "../../components/BaseHead.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
+
+import BaseHead from "../../components/BaseHead.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
+import SiteNav from "../../components/SiteNav.astro";
+import TagList from "../../components/TagList";
+
+import { BlogPostList } from "../../components/BlogPostList.tsx";
 
 const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
     (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
-        Date.parse(b.data.date) - Date.parse(a.data.date)
+        b.data.date.getMilliseconds() - a.data.date.getMilliseconds()
 );
+
+const tags = [...new Set(posts.flatMap(({ data: { tags } }) => tags))];
 ---
 
 <!doctype html>
@@ -15,6 +22,8 @@ const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
         <BaseHead title="Liz Ainslie" />
     </head>
     <body>
+        <SiteNav />
+
         <table class="header">
             <tr>
                 <td colspan="4" class="banner-cell">
@@ -40,12 +49,14 @@ const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
                     {posts[0]?.data?.date ? <FormattedDate date={posts[0]!!.data!!.date} /> : "None"}
                 </td>
             </tr>
+            <tr>
+                <th class="width-min" colspan="1">Tags</th>
+                <td class="width-auto" colspan="3">
+                    <TagList tags={tags} client:only="react" />
+                </td>
+            </tr>
         </table>
-        {posts.map(({ data: { date, title, description }, id }) => (
-            <a href={`/blog/${id}`} class="blog-post">
-                <h2>{title}</h2>
-                <p>{description}</p>
-            </a>
-        ))}
+
+        <BlogPostList posts={posts} client:only="react" />
     </body>
 </html>
