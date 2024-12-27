@@ -105,3 +105,23 @@ pre.astro-code {
     flex-direction: column;
     gap: var(--line-height);
 }
+
+.blog-content blockquote {
+    border-left: var(--border-thickness) solid var(--accent);
+    padding:
+            calc(var(--line-height) / 2)
+            calc(1ch - var(--border-thickness));
+    display: block;
+    margin-block-start: var(--line-height);
+    margin-block-end: var(--line-height);
+    margin-inline-start: 2ch;
+    margin-inline-end: 2ch;
+}
+
+.blog-content blockquote * {
+    margin: 0;
+}
+
+.blog-content blockquote p + p {
+    margin-top: var(--line-height)
+}
