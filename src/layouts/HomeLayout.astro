@@ -1,5 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
+import SiteNav from "../components/SiteNav.astro";
 ---
 <!doctype html>
 <html lang="en">
@@ -7,6 +8,8 @@ import BaseHead from "../components/BaseHead.astro";
 		<BaseHead title="Liz Ainslie" />
 	</head>
 	<body>
+		<SiteNav />
+
 		<table class="header">
 			<tr>
 				<td colspan="4" class="banner-cell">
@@ -41,6 +44,7 @@ import BaseHead from "../components/BaseHead.astro";
 				</td>
 			</tr>
 		</table>
+
 		<slot />
 	</body>
 </html>

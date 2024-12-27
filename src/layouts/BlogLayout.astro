@@ -4,6 +4,8 @@ import OpenGraphTags from "../components/OpenGraphTags.astro";
 import { type CollectionEntry } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
 import CopyText from "../components/CopyText.astro";
+import SiteNav from "../components/SiteNav.astro";
+import TagList from "../components/TagList";
 
 type Props = CollectionEntry<'blog'>['data'];
 
@@ -29,6 +31,8 @@ const url = Astro.url
         />
     </head>
     <body class="blog-content">
+        <SiteNav />
+
         <table class="header">
             {image && (
                 <tr>
@@ -59,7 +63,14 @@ const url = Astro.url
                     </CopyText>
                 </td>
             </tr>
+            <tr>
+                <th class="width-min" colspan="1">Tags</th>
+                <td class="width-auto tag-list" colspan="3">
+                    <TagList tags={tags} client:only="react" />
+                </td>
+            </tr>
         </table>
+
         <slot />
     </body>
 </html>
