@@ -1,0 +1,48 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+
+const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
+    (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
+        Date.parse(b.data.date) - Date.parse(a.data.date)
+);
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead title="Liz Ainslie" />
+    </head>
+    <body>
+        <table class="header">
+            <tr>
+                <td colspan="4" class="banner-cell">
+                    <img src="/images/banner_blog.png" alt="Banner">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="2" class="width-auto">
+                    <div class="title-wrap">
+                        <!--            <img src="images/pfp.png" alt="Profile Pic">-->
+                        <div>
+                            <h1 class="title">Liz Ainslie</h1>
+                            <span class="subtitle">Blog</span>
+                        </div>
+                    </div>
+                </td>
+                <th>Posts</th>
+                <td class="width-min">{posts.length}</td>
+            </tr>
+            <tr>
+                <th>Latest</th>
+                <td class="width-min"><time style="white-space: pre;">{posts[0]?.data?.date ?? "None"}</time></td>
+            </tr>
+        </table>
+        {posts.map(({ data: { date, title, description }, id }) => (
+            <a href={`/blog/${id}`} class="blog-post">
+                <h2>{title}</h2>
+                <p>{description}</p>
+            </a>
+        ))}
+    </body>
+</html>

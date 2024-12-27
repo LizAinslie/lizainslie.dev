@@ -1,0 +1,599 @@
+@font-face {
+    font-family: 'Iosevka Mey';
+    src: local('Iosevka Mey Bold Italic'), local('Iosevka-Mey-Bold-Italic'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Bold-Italic.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Bold-Italic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey';
+    src: local('Iosevka Mey Bold'), local('Iosevka-Mey-Bold'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Bold.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Oblique';
+    src: local('Iosevka Mey Bold Oblique'), local('Iosevka-Mey-Bold-Oblique'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Bold-Oblique.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Bold-Oblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Extended';
+    src: local('Iosevka Mey Bold Extended Italic'), local('Iosevka-Mey-Bold-Extended-Italic'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Bold-Extended-Italic.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Bold-Extended-Italic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Extended';
+    src: local('Iosevka Mey Extended'), local('Iosevka-Mey-Extended'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Extended.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Extended.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Extended';
+    src: local('Iosevka Mey Bold Extended'), local('Iosevka-Mey-Bold-Extended'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Bold-Extended.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Bold-Extended.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Extended Oblique';
+    src: local('Iosevka Mey Bold Extended Oblique'), local('Iosevka-Mey-Bold-Extended-Oblique'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Bold-Extended-Oblique.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Bold-Extended-Oblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Extrabold Extended';
+    src: local('Iosevka Mey Extrabold Extended Italic'), local('Iosevka-Mey-Extrabold-Extended-Italic'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Extrabold-Extended-Italic.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Extrabold-Extended-Italic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Extrabold Extended';
+    src: local('Iosevka Mey Extrabold Extended'), local('Iosevka-Mey-Extrabold-Extended'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Extrabold-Extended.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Extrabold-Extended.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey XBd Ex Obl';
+    src: local('Iosevka Mey Extrabold Extended Oblique'), local('Iosevka-Mey-Extrabold-Extended-Oblique'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Extrabold-Extended-Oblique.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Extrabold-Extended-Oblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey XLt Ex Obl';
+    src: local('Iosevka Mey Extralight Extended Oblique'), local('Iosevka-Mey-Extralight-Extended-Oblique'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Extralight-Extended-Oblique.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Extralight-Extended-Oblique.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey XLt Ex';
+    src: local('Iosevka Mey Extralight Extended'), local('Iosevka-Mey-Extralight-Extended'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Extralight-Extended.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Extralight-Extended.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey XLt Ex';
+    src: local('Iosevka Mey Extralight Extended Italic'), local('Iosevka-Mey-Extralight-Extended-Italic'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Extralight-Extended-Italic.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Extralight-Extended-Italic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Heavy Extended';
+    src: local('Iosevka Mey Heavy Extended'), local('Iosevka-Mey-Heavy-Extended'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Heavy-Extended.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Heavy-Extended.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Heavy Extended';
+    src: local('Iosevka Mey Heavy Extended Italic'), local('Iosevka-Mey-Heavy-Extended-Italic'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Heavy-Extended-Italic.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Heavy-Extended-Italic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Hv Ex Obl';
+    src: local('Iosevka Mey Heavy Extended Oblique'), local('Iosevka-Mey-Heavy-Extended-Oblique'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Heavy-Extended-Oblique.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Heavy-Extended-Oblique.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Extended';
+    src: local('Iosevka Mey Extended Italic'), local('Iosevka-Mey-Extended-Italic'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Extended-Italic.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Extended-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Light Extended';
+    src: local('Iosevka Mey Light Extended'), local('Iosevka-Mey-Light-Extended'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Light-Extended.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Light-Extended.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Light Extended';
+    src: local('Iosevka Mey Light Extended Italic'), local('Iosevka-Mey-Light-Extended-Italic'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Light-Extended-Italic.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Light-Extended-Italic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Lt Ex Obl';
+    src: local('Iosevka Mey Light Extended Oblique'), local('Iosevka-Mey-Light-Extended-Oblique'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Light-Extended-Oblique.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Light-Extended-Oblique.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Medium Extended';
+    src: local('Iosevka Mey Medium Extended Italic'), local('Iosevka-Mey-Medium-Extended-Italic'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Medium-Extended-Italic.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Medium-Extended-Italic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Medium Extended';
+    src: local('Iosevka Mey Medium Extended'), local('Iosevka-Mey-Medium-Extended'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Medium-Extended.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Medium-Extended.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Md Ex Obl';
+    src: local('Iosevka Mey Medium Extended Oblique'), local('Iosevka-Mey-Medium-Extended-Oblique'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Medium-Extended-Oblique.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Medium-Extended-Oblique.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Extended Oblique';
+    src: local('Iosevka Mey Extended Oblique'), local('Iosevka-Mey-Extended-Oblique'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Extended-Oblique.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Extended-Oblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Semibold Extended';
+    src: local('Iosevka Mey Semibold Extended'), local('Iosevka-Mey-Semibold-Extended'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Semibold-Extended.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Semibold-Extended.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Semibold Extended';
+    src: local('Iosevka Mey Semibold Extended Italic'), local('Iosevka-Mey-Semibold-Extended-Italic'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Semibold-Extended-Italic.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Semibold-Extended-Italic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey SmBd Ex Obl';
+    src: local('Iosevka Mey Semibold Extended Oblique'), local('Iosevka-Mey-Semibold-Extended-Oblique'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Semibold-Extended-Oblique.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Semibold-Extended-Oblique.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Thin Extended';
+    src: local('Iosevka Mey Thin Extended'), local('Iosevka-Mey-Thin-Extended'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Thin-Extended.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Thin-Extended.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Thin Extended';
+    src: local('Iosevka Mey Thin Extended Italic'), local('Iosevka-Mey-Thin-Extended-Italic'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Thin-Extended-Italic.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Thin-Extended-Italic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Th Ex Obl';
+    src: local('Iosevka Mey Thin Extended Oblique'), local('Iosevka-Mey-Thin-Extended-Oblique'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Thin-Extended-Oblique.woff2') format('woff2'),
+        url('/fonts/iosevka_mey/Iosevka-Mey-Thin-Extended-Oblique.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey';
+    src: local('Iosevka Mey Bold Italic'), local('Iosevka-Mey-Bold-Italic'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Bold-Italic.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Bold-Italic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey';
+    src: local('Iosevka Mey Bold'), local('Iosevka-Mey-Bold'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Bold.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Oblique';
+    src: local('Iosevka Mey Bold Oblique'), local('Iosevka-Mey-Bold-Oblique'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Bold-Oblique.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Bold-Oblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Extended';
+    src: local('Iosevka Mey Bold Extended Italic'), local('Iosevka-Mey-Bold-Extended-Italic'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Bold-Extended-Italic.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Bold-Extended-Italic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Extended';
+    src: local('Iosevka Mey Extended'), local('Iosevka-Mey-Extended'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Extended.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Extended.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Extended';
+    src: local('Iosevka Mey Bold Extended'), local('Iosevka-Mey-Bold-Extended'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Bold-Extended.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Bold-Extended.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Extended Oblique';
+    src: local('Iosevka Mey Bold Extended Oblique'), local('Iosevka-Mey-Bold-Extended-Oblique'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Bold-Extended-Oblique.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Bold-Extended-Oblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Extrabold Extended';
+    src: local('Iosevka Mey Extrabold Extended Italic'), local('Iosevka-Mey-Extrabold-Extended-Italic'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Extrabold-Extended-Italic.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Extrabold-Extended-Italic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Extrabold Extended';
+    src: local('Iosevka Mey Extrabold Extended'), local('Iosevka-Mey-Extrabold-Extended'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Extrabold-Extended.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Extrabold-Extended.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey XBd Ex Obl';
+    src: local('Iosevka Mey Extrabold Extended Oblique'), local('Iosevka-Mey-Extrabold-Extended-Oblique'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Extrabold-Extended-Oblique.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Extrabold-Extended-Oblique.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey XLt Ex Obl';
+    src: local('Iosevka Mey Extralight Extended Oblique'), local('Iosevka-Mey-Extralight-Extended-Oblique'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Extralight-Extended-Oblique.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Extralight-Extended-Oblique.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey XLt Ex';
+    src: local('Iosevka Mey Extralight Extended'), local('Iosevka-Mey-Extralight-Extended'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Extralight-Extended.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Extralight-Extended.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey XLt Ex';
+    src: local('Iosevka Mey Extralight Extended Italic'), local('Iosevka-Mey-Extralight-Extended-Italic'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Extralight-Extended-Italic.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Extralight-Extended-Italic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Heavy Extended';
+    src: local('Iosevka Mey Heavy Extended'), local('Iosevka-Mey-Heavy-Extended'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Heavy-Extended.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Heavy-Extended.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Heavy Extended';
+    src: local('Iosevka Mey Heavy Extended Italic'), local('Iosevka-Mey-Heavy-Extended-Italic'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Heavy-Extended-Italic.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Heavy-Extended-Italic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Hv Ex Obl';
+    src: local('Iosevka Mey Heavy Extended Oblique'), local('Iosevka-Mey-Heavy-Extended-Oblique'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Heavy-Extended-Oblique.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Heavy-Extended-Oblique.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Extended';
+    src: local('Iosevka Mey Extended Italic'), local('Iosevka-Mey-Extended-Italic'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Extended-Italic.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Extended-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Light Extended';
+    src: local('Iosevka Mey Light Extended'), local('Iosevka-Mey-Light-Extended'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Light-Extended.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Light-Extended.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Light Extended';
+    src: local('Iosevka Mey Light Extended Italic'), local('Iosevka-Mey-Light-Extended-Italic'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Light-Extended-Italic.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Light-Extended-Italic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Lt Ex Obl';
+    src: local('Iosevka Mey Light Extended Oblique'), local('Iosevka-Mey-Light-Extended-Oblique'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Light-Extended-Oblique.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Light-Extended-Oblique.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Medium Extended';
+    src: local('Iosevka Mey Medium Extended Italic'), local('Iosevka-Mey-Medium-Extended-Italic'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Medium-Extended-Italic.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Medium-Extended-Italic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Medium Extended';
+    src: local('Iosevka Mey Medium Extended'), local('Iosevka-Mey-Medium-Extended'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Medium-Extended.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Medium-Extended.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Md Ex Obl';
+    src: local('Iosevka Mey Medium Extended Oblique'), local('Iosevka-Mey-Medium-Extended-Oblique'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Medium-Extended-Oblique.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Medium-Extended-Oblique.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Extended Oblique';
+    src: local('Iosevka Mey Extended Oblique'), local('Iosevka-Mey-Extended-Oblique'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Extended-Oblique.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Extended-Oblique.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Semibold Extended';
+    src: local('Iosevka Mey Semibold Extended'), local('Iosevka-Mey-Semibold-Extended'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Semibold-Extended.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Semibold-Extended.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Semibold Extended';
+    src: local('Iosevka Mey Semibold Extended Italic'), local('Iosevka-Mey-Semibold-Extended-Italic'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Semibold-Extended-Italic.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Semibold-Extended-Italic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey SmBd Ex Obl';
+    src: local('Iosevka Mey Semibold Extended Oblique'), local('Iosevka-Mey-Semibold-Extended-Oblique'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Semibold-Extended-Oblique.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Semibold-Extended-Oblique.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Thin Extended';
+    src: local('Iosevka Mey Thin Extended'), local('Iosevka-Mey-Thin-Extended'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Thin-Extended.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Thin-Extended.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Thin Extended';
+    src: local('Iosevka Mey Thin Extended Italic'), local('Iosevka-Mey-Thin-Extended-Italic'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Thin-Extended-Italic.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Thin-Extended-Italic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Iosevka Mey Th Ex Obl';
+    src: local('Iosevka Mey Thin Extended Oblique'), local('Iosevka-Mey-Thin-Extended-Oblique'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Thin-Extended-Oblique.woff2') format('woff2'),
+    url('/fonts/iosevka_mey/Iosevka-Mey-Thin-Extended-Oblique.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}

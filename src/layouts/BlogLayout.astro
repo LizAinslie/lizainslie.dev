@@ -1,0 +1,65 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import OpenGraphTags from "../components/OpenGraphTags.astro";
+import { type CollectionEntry } from "astro:content";
+import FormattedDate from "../components/FormattedDate.astro";
+import CopyText from "../components/CopyText.astro";
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const {
+    title,
+    description,
+    image,
+    date,
+    tags
+} = Astro.props
+
+const url = Astro.url
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead title={`${title} | Liz Ainslie`} description={description} />
+        <OpenGraphTags
+            title={`${title} | Liz Ainslie`}
+            description={description}
+            image={image}
+        />
+    </head>
+    <body class="blog-content">
+        <table class="header">
+            {image && (
+                <tr>
+                    <td colspan="4" class="banner-cell">
+                        <img src={image} alt="Banner">
+                    </td>
+                </tr>
+            )}
+            <tr>
+                <td colspan="2" rowspan="2" class="width-auto">
+                    <div class="title-wrap">
+                        <div>
+                            <h1 class="title">{title}</h1>
+                            <span class="subtitle"></span>
+                        </div>
+                    </div>
+                </td>
+                <th>Posted</th>
+                <td class="width-min">
+                    <FormattedDate date={date} />
+                </td>
+            </tr>
+            <tr>
+                <th>Share</th>
+                <td class="width-min">
+                    <CopyText text={url.toString()}>
+                        Copy Link
+                    </CopyText>
+                </td>
+            </tr>
+        </table>
+        <slot />
+    </body>
+</html>

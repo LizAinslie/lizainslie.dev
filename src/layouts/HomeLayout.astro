@@ -1,0 +1,46 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="Liz Ainslie" />
+	</head>
+	<body>
+		<table class="header">
+			<tr>
+				<td colspan="4" class="banner-cell">
+					<img src="/images/banner_home.png" alt="Banner">
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" rowspan="2" class="width-auto">
+					<div class="title-wrap">
+						<!--            <img src="images/pfp.png" alt="Profile Pic">-->
+						<div>
+							<h1 class="title">Liz Ainslie</h1>
+							<span class="subtitle">Full-stack engineer</span>
+						</div>
+					</div>
+				</td>
+				<th>Pronouns</th>
+				<td class="width-min">it/she</td>
+			</tr>
+			<tr>
+				<th>HRT</th>
+				<td class="width-min"><time style="white-space: pre;">06/12/24</time></td>
+			</tr>
+			<tr>
+				<th class="width-min" colspan="1">Links</th>
+				<td class="width-auto" colspan="3">
+					<a href="https://x.com/0xLizzyTheWitch" target="_blank">Twitter</a>
+					<a href="https://bsky.app/profile/lizainslie.dev" target="_blank">Bluesky</a>
+					<a href="https://github.com/lizainslie" target="_blank">GitHub</a>
+					<a href="https://discord.gg/hKd9eQTQmZ" target="_blank">Discord</a>
+					<a href="https://www.last.fm/user/LizAinslie" target="_blank">Last.fm</a>
+				</td>
+			</tr>
+		</table>
+		<slot />
+	</body>
+</html>

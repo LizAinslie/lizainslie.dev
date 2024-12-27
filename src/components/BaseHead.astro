@@ -1,0 +1,17 @@
+---
+interface Props {
+    title: string;
+    description?: string;
+}
+
+const { title, description } = Astro.props
+---
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<link rel="icon" href="/images/pfp.png" />
+<meta name="generator" content={Astro.generator} />
+<title>{title}</title>
+<link rel="stylesheet" href="/styles/iosevka_mey.css" />
+<link rel="stylesheet" href="/styles/reset.css">
+<link rel="stylesheet" href="/styles/mono.css">
+<link rel="stylesheet" href="/styles/index.css">

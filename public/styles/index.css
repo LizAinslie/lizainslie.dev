@@ -1,0 +1,67 @@
+.banner-cell {
+    padding: 0;
+    padding-top: 0 !important;
+}
+
+.title-wrap {
+    display: flex;
+    gap: 1rem;
+}
+
+.title-wrap img {
+    width: 4rem;
+    height: auto;
+}
+
+.blog-post {
+    border: var(--border-thickness) solid var(--text-color);
+    padding:
+            calc(var(--line-height) / 2 - var(--border-thickness))
+            calc(2ch - var(--border-thickness));
+    margin: 0;
+    width: calc(round(down, 100%, 1ch));
+    cursor: pointer;
+    background-color: var(--background-color);
+    transition: background-color 0.5s;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.blog-post h2 {
+    margin: var(--line-height) 0;
+    font-weight: var(--font-weight-medium);
+}
+
+.blog-post p {
+    margin-top: 0;
+}
+
+.blog-post:hover {
+    background-color: var(--background-color-alt);
+}
+
+pre.astro-code {
+    padding:
+            var(--line-height)
+            2ch;
+    margin: 0;
+    width: calc(round(down, 100%, 1ch));
+}
+
+.blog-content img {
+    width: calc(round(down, 100%, 1ch));
+}
+
+.copy-text.link {
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    background: none;
+    height: auto;
+    text-transform: none;
+}
+
+.copy-text.link:hover {
+    text-decoration: underline;
+}
