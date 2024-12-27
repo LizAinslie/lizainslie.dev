@@ -1,6 +1,7 @@
 ---
 import BaseHead from "../../components/BaseHead.astro";
 import { getCollection, type CollectionEntry } from "astro:content";
+import FormattedDate from "../../components/FormattedDate.astro";
 
 const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
     (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
@@ -35,7 +36,9 @@ const posts: CollectionEntry<"blog">[] = (await getCollection("blog")).sort(
             </tr>
             <tr>
                 <th>Latest</th>
-                <td class="width-min"><time style="white-space: pre;">{posts[0]?.data?.date ?? "None"}</time></td>
+                <td class="width-min">
+                    {posts[0]?.data?.date ? <FormattedDate date={posts[0]!!.data!!.date} /> : "None"}
+                </td>
             </tr>
         </table>
         {posts.map(({ data: { date, title, description }, id }) => (
