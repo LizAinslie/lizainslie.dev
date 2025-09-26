@@ -1,24 +1,24 @@
 ---
 // Component Imports
-import MainHead from '../components/MainHead.astro';
-import NavHero from '../components/NavHero/index.jsx';
-import HomeHero from '../components/HomeHero/index.jsx';
+import MainHead from "../components/MainHead.astro";
+import NavHero from "../components/NavHero/index.jsx";
+import HomeHero from "../components/HomeHero/index.jsx";
 ---
 
 <html lang="en">
-	<head>
-		<MainHead
-			title="Liz Ainslie"
-			description="Liz Ainslie: Freelance & Hobbyist Full Stack Developer"
-			color="#dc3545"
-		/>
-	</head>
-	<body>
-		<NavHero color="transparent" fixedNav full>
-			<HomeHero />
-		</NavHero>
+  <head>
+    <MainHead
+      title="Liz Ainslie"
+      description="Liz Ainslie: Freelance & Hobbyist Full Stack Developer"
+      color="#2d333b"
+    />
+  </head>
+  <body>
+    <NavHero color="transparent" fixedNav full>
+      <HomeHero />
+    </NavHero>
 
-		<script is:inline async src="/animation.js"></script>
-		<script is:inline async src="/lanyard.js"></script>
-	</body>
+    <script is:inline async src="/animation.js"></script>
+    <script is:inline async src="/lanyard.js"></script>
+  </body>
 </html>
