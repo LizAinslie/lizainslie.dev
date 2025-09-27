@@ -13,7 +13,6 @@
     "@astrojs/mdx": "^0.11.1",
     "@astrojs/react": "^1.0.0",
     "@astrojs/tailwind": "^1.0.0",
-    "@astrojs/vercel": "^1.0.0",
     "astro": "^1.0.6",
     "astro-robots-txt": "^0.3.12",
     "react": "^18.0.0",
