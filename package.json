@@ -10,10 +10,10 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^0.11.1",
-    "@astrojs/react": "^1.0.0",
-    "@astrojs/tailwind": "^1.0.0",
-    "astro": "^1.0.6",
+    "@astrojs/mdx": "^4.3.6",
+    "@astrojs/react": "^4.4.0",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.14.1",
     "astro-robots-txt": "^0.3.12",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "dateformat": "^5.0.3",
+    "react-use-lanyard": "^0.3.4",
     "reading-time": "^1.5.0"
   },
   "packageManager": "pnpm@8.15.5+sha1.a58c038faac410c947dbdb93eb30994037d0fce2"

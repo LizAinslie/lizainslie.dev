@@ -8,6 +8,7 @@ tags:
   - opinion
   - rant
   - languages
+update: true
 ---
 
 Let me preface this by saying something fairly important: I don't hate anything
@@ -71,8 +72,8 @@ for adoption. You can still find Jesus.
 ## DX and Rust
 In my career, Rust is arguably the worst experience I have ever had writing
 software, and it's competing for that  position with **Java**. Since I've done
-this dance with countless Rust fanatics already, I'm familiar and comfortable 
-with both OOP and FP patterns in my work, and I've consistently written in 
+this dance with countless Rust fanatics already, I'm familiar and comfortable
+with both OOP and FP patterns in my work, and I've consistently written in
 everything from C and Assembly to JavaScript and Ruby. I could easily learn Rust
 in a day if I had to but I'd probably opt to quit my job instead if learning
 Rust were on the table.
@@ -112,3 +113,7 @@ nowadays. (I may write an article later going into why I think these are a joke,
 but that pretty much boils down to "If it works, don't fix it" and "You should
 probably try to improve the current thing rather than reinvent the wheel for the
 millionth goddamn time")
+
+## Updates
+
+- [2023 Year In Review](/blog/2023/12/31/year-in-review#shortcomings)
