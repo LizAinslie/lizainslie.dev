@@ -1,4 +1,5 @@
-import { ComponentProps, FC, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import type { ComponentProps, FC } from "react";
 import { Delta } from "../utils/delta";
 
 export type CanvasBaseProps = {

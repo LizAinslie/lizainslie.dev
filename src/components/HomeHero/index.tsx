@@ -1,6 +1,7 @@
 import styles from "./styles.module.scss";
 import { ShapesAnimationCanvas } from "./animation";
 import { useLanyard } from "react-use-lanyard";
+import type { FC } from "react";
 
 const STATUS_CLASSES: Record<"online" | "idle" | "dnd" | "offline", string> = {
   online: "bg-green-500",
@@ -9,7 +10,7 @@ const STATUS_CLASSES: Record<"online" | "idle" | "dnd" | "offline", string> = {
   offline: "bg-gray-500",
 };
 
-export default function HomeHero() {
+const HomeHero: FC = () => {
   const lanyard = useLanyard({
     userId: "543542278967394322",
     socket: true,
@@ -75,4 +76,6 @@ export default function HomeHero() {
       <ShapesAnimationCanvas />
     </div>
   );
-}
+};
+
+export default HomeHero;

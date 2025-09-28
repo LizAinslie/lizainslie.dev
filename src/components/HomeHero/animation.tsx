@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from "react";
+import { type FC, useEffect, useState } from "react";
 import styles from "./styles.module.scss";
 import { CanvasBase } from "../CanvasBase";
 import { useMediaQuery } from "../../utils/media";

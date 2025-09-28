@@ -1,4 +1,4 @@
-import { type FC } from "react";
+import type { FC } from "react";
 import styles from "./styles.module.scss";
 
 const Footer: FC = () => {
