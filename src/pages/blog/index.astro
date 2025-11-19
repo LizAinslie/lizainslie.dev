@@ -1,47 +1,60 @@
 ---
-import Footer from '../../components/Footer';
-import MainHead from '../../components/MainHead.astro';
-import Nav from '../../components/Nav';
-import NavHero from '../../components/NavHero';
-import ProjectCard from '../../components/ProjectCard/index.jsx';
-import dateFormat from 'dateformat';
+import Footer from "../../components/Footer";
+import MainHead from "../../components/MainHead.astro";
+import NavHero from "../../components/NavHero";
+import dateFormat from "dateformat";
+import { getCollection } from "astro:content";
 
-interface ProjectFrontmatter {
-  title: string;
-  date: Date;
-  summary?: string;
-  tags?: string[];
-}
-
-const allPosts = await Astro.glob<ProjectFrontmatter>('./**/*.md');
+const allPosts = (await getCollection("blog"))
+    .sort((a, b) => a.data.date.getTime() - b.data.date.getTime())
+    .reverse();
 ---
 
 <html lang="en">
     <head>
         <MainHead
-			title="Blog | Liz Ainslie"
-			description="Liz Ainslie: Freelance & Hobbyist Full Stack Developer"
-		/>
+            title="Blog | Liz Ainslie"
+            description="Liz Ainslie: Freelance & Hobbyist Full Stack Developer"
+        />
     </head>
     <body>
         <NavHero>
-            <div class="py-32 flex flex-col items-center text-center topography" style="fill: #1e2329;">
-                <h1 class="font-display text-6xl font-light text-white">Blog</h1>
-                <p class="text-2xl mt-4 text-white">My writing about tech, music, and life.</p>
+            <div
+                class="py-32 flex flex-col items-center text-center topography"
+                style="fill: #1e2329;"
+            >
+                <h1 class="font-display text-6xl font-light text-white">
+                    Blog
+                </h1>
+                <p class="text-2xl mt-4 text-white">
+                    My writing about tech, music, and life.
+                </p>
             </div>
         </NavHero>
 
         <div class="container mx-auto py-8">
             <div class="flex flex-col">
-                {allPosts
-                    .sort((a, b) => new Date(a.frontmatter.date).getMilliseconds() - new Date(b.frontmatter.date).getMilliseconds())
-                    .reverse()
-                    .map(post => (
+                {
+                    allPosts.map((post) => (
                         <div class="postItem">
-                            <h2 class="text-3xl"><a href={post.url} class="hover:underline">{post.frontmatter.title}</a></h2>
-                            {post.frontmatter.summary && (<p class="mt-2 leading-relaxed">{post.frontmatter.summary}</p>)}
+                            <h2 class="text-3xl">
+                                <a
+                                    href={`/blog/${post.id}`}
+                                    class="hover:underline"
+                                >
+                                    {post.data.title}
+                                </a>
+                            </h2>
+                            {post.data.summary && (
+                                <p class="mt-2 leading-relaxed">
+                                    {post.data.summary}
+                                </p>
+                            )}
                             <p class="mt-4 text-gray-400">
-                                {dateFormat(post.frontmatter.date, "UTC:mmm d, yyyy")} &middot; {post.frontmatter.tags.join(', ')}
+                                {dateFormat(post.data.date, "UTC:mmm d, yyyy")}{" "}
+                                {post.data.tags && (
+                                    <>&middot; {post.data.tags.join(", ")}</>
+                                )}
                             </p>
                         </div>
                     ))

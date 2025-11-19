@@ -16,8 +16,6 @@ const HomeHero: FC = () => {
     socket: true,
   });
 
-  console.log(lanyard);
-
   return (
     <div className={styles.homeHeroWrapper}>
       <div className={styles.heroContent}>
@@ -30,7 +28,7 @@ const HomeHero: FC = () => {
           <div className="flex flex-col flex-1 md:items-start mt-8 md:mt-0 md:ml-8">
             <h1 className="flex text-6xl md:text-8xl font-display text-center md:text-left justify-center md:justify-start">
               Liz Ainslie
-              {!lanyard.loading && (
+              {!lanyard.loading && lanyard.status?.discord_user && (
                 <div id="discordBox" className={styles.discordTag}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

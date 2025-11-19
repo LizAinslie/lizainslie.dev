@@ -1,7 +1,5 @@
 ---
-layout: ../../layouts/project.astro
 title: Material You Compass
-site: https://synapsetech.dev/products/compass
 image: /assets/compass_banner_portfolio.png
 github: SynapseTech/Compass
 description: |
@@ -17,7 +15,7 @@ A simple & straightforward, no-BS compass app that works with your Material You
 colors. Nothing more, nothing less!
 
 ## Project Motivation
-I do security work as a fourth job and having a proper compass helps. I tried 
+I do security work as a day job and having a proper compass helps. I tried
 finding a good option on the Play Store but they all contain ads or shill other
 apps. I just needed something that'd give me a general direction and (when I
 need it) my exact bearing, so that's why I made this. I also made it draw colors

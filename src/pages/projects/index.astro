@@ -1,43 +1,46 @@
 ---
-import Footer from '../../components/Footer';
-import MainHead from '../../components/MainHead.astro';
-import Nav from '../../components/Nav';
-import NavHero from '../../components/NavHero';
-import ProjectCard from '../../components/ProjectCard/index.jsx';
+import Footer from "../../components/Footer";
+import MainHead from "../../components/MainHead.astro";
+import Nav from "../../components/Nav";
+import NavHero from "../../components/NavHero";
+import ProjectCard from "../../components/ProjectCard/index.jsx";
+import { getCollection } from "astro:content";
 
-interface ProjectFrontmatter {
-  title: string;
-  url: string;
-  client?: string;
-  github?: string;
-  description?: string;
-  image?: string;
-  tags?: string[];
-}
-
-const allProjects = await Astro.glob<ProjectFrontmatter>('./*.md');
+const allProjects = await getCollection("projects");
 ---
 
 <html lang="en">
     <head>
         <MainHead
-			title="Projects | Liz Ainslie"
-			description="Liz Ainslie: Freelance & Hobbyist Full Stack Developer"
-		/>
+            title="Projects | Liz Ainslie"
+            description="Liz Ainslie: Freelance & Hobbyist Full Stack Developer"
+        />
     </head>
     <body>
         <NavHero>
-            <div class="py-32 px-4 flex flex-col items-center text-center topography" style="fill: #1e2329;">
-                <h1 class="font-display text-6xl font-light text-white">My Projects</h1>
-                <p class="text-2xl mt-4 text-white">Websites, music & content that I make.</p>
+            <div
+                class="py-32 px-4 flex flex-col items-center text-center topography"
+                style="fill: #1e2329;"
+            >
+                <h1 class="font-display text-6xl font-light text-white">
+                    My Projects
+                </h1>
+                <p class="text-2xl mt-4 text-white">
+                    Websites, music & content that I make.
+                </p>
             </div>
         </NavHero>
 
         <div class="container mx-auto py-8 px-4 md:px-0">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {allProjects.map(project => (
-                    <ProjectCard {...project.frontmatter} link={project.url} />
-                ))}
+                {
+                    allProjects.map((project) => (
+                        <ProjectCard
+                            project={project}
+                            link={`/projects/${project.id}`}
+                        />
+                    ))
+                }
             </div>
         </div>
 

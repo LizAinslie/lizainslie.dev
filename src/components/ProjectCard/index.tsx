@@ -1,36 +1,33 @@
 import type { FC } from "react";
 import styles from "./styles.module.scss";
+import type { CollectionEntry } from "astro:content";
 
 interface IProjectCardProps {
-  title: string;
-  site: string;
-  description?: string;
-  client?: string;
-  github?: string;
-  image?: string;
-  tags?: string[];
+  project: CollectionEntry<"projects">;
   link?: string;
 }
 
 const ProjectCard: FC<IProjectCardProps> = ({
-  title,
-  site,
-  description,
-  client,
-  github,
-  tags,
-  image,
+  project,
   link,
 }: IProjectCardProps) => {
   return (
     <div className={styles.projectCard}>
-      {image ? (
+      {project.data.image ? (
         <>
-          <img className={styles.preview} src={image} alt={title} />
+          <img
+            className={styles.preview}
+            src={project.data.image}
+            alt={project.data.title}
+          />
         </>
       ) : (
         <>
-          <iframe className={styles.preview} src={site} title={title}></iframe>
+          <iframe
+            className={styles.preview}
+            src={project.data.site}
+            title={project.data.title}
+          ></iframe>
         </>
       )}
       <div className={styles.overlay}>
@@ -41,7 +38,11 @@ const ProjectCard: FC<IProjectCardProps> = ({
             </a>
           ) : (
             <a
-              href={site}
+              href={
+                project.data.site ??
+                (project.data.github &&
+                  `https://github.com/${project.data.github}`)
+              }
               rel="noreferrer noopener"
               target="_blank"
               className={styles.visitBtn}
@@ -52,17 +53,25 @@ const ProjectCard: FC<IProjectCardProps> = ({
 
           <div className={styles.info}>
             <div className={styles.paragraph}>
-              <h4 className={styles.heading}>{title}</h4>
-              {description ? <p className={styles.body}>{description}</p> : ""}
-              {client ? <p className={styles.meta}>For {client}</p> : ""}
+              <h4 className={styles.heading}>{project.data.title}</h4>
+              {project.data.description ? (
+                <p className={styles.body}>{project.data.description}</p>
+              ) : (
+                ""
+              )}
+              {project.data.client ? (
+                <p className={styles.meta}>For {project.data.client}</p>
+              ) : (
+                ""
+              )}
             </div>
-            <div className={styles.spacer} />
-            {github ? (
+            <div className={styles.space} />
+            {project.data.github ? (
               <a
                 className={styles.iconLink}
                 rel="noreferrer noopener"
                 target="_blank"
-                href={`https://github.com/${github}`}
+                href={`https://github.com/${project.data.github}`}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

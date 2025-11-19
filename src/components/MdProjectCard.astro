@@ -1,0 +1,17 @@
+---
+import ProjectCard from "./ProjectCard";
+
+import { getEntry } from "astro:content";
+
+const { project: projectName } = Astro.props;
+
+const project = await getEntry("projects", projectName);
+---
+
+{
+    project && (
+        <div class="char-80">
+            <ProjectCard client:only project={project} />
+        </div>
+    )
+}

@@ -1,0 +1,55 @@
+---
+import Footer from "../../components/Footer";
+import MainHead from "../../components/MainHead.astro";
+import Nav from "../../components/Nav";
+import ProjectCard from "../../components/ProjectCard";
+import { getCollection, render, getEntry } from "astro:content";
+
+export async function getStaticPaths() {
+    const projects = await getCollection("projects");
+    return projects.map((project) => ({
+        params: { id: project.id },
+        props: { project },
+    }));
+}
+
+const { project } = Astro.props;
+const { Content, headings } = await render(project);
+---
+
+<html lang={"en"}>
+    <head>
+        <MainHead
+            title={`${project.data.title} | Liz Ainslie`}
+            description={project.data.description}
+        />
+    </head>
+    <body>
+        <Nav />
+        <div class="container mx-auto pt-8 md:pt-12">
+            <div class="px-4"><ProjectCard project={project} /></div>
+            <div class="flex mt-8">
+                <article class="content mb-12">
+                    <Content />
+                </article>
+                <aside
+                    class="hidden lg:block h-screen sticky top-0 min-w-fit max-w-[20%] p-4"
+                >
+                    <div class="headingLinks">
+                        {
+                            headings.map((heading) => (
+                                <a
+                                    class="headingLink"
+                                    href={`#${heading.slug}`}
+                                >
+                                    {heading.text}
+                                </a>
+                            ))
+                        }
+                    </div>
+                </aside>
+            </div>
+        </div>
+        <Footer />
+    </body>
+</html>

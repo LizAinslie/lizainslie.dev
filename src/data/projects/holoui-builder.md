@@ -1,9 +1,7 @@
 ---
-layout: ../../layouts/project.astro
 title: HoloUI Builder
 client: Studio Archetype
-site: https://holoui.studioarchetype.net
-github: Studio-Archetype/HUI-Builder
+github: VolmitSoftware/HUI-Web-Editor
 description: |
   A web builder for a custom UI Minecraft server plugin.
 tags:
@@ -12,10 +10,10 @@ tags:
 ---
 
 # HUI Builder
-HoloUI, by [Studio Archetype](https://studioarchetype.net) is a Minecraft Spigot
-plugin that creates holographic user interfaces around players using armor
-stands. I was tasked with building a web editor server admins can use to modify
-user interfaces and export them as config files for the server.
+HoloUI, by Studio Archetype is a Minecraft Spigot plugin that creates
+holographic user interfaces around players using armor stands. I was tasked with
+building a web editor server admins can use to modify user interfaces and export
+them as config files for the server.
 
 ## Technologies Used
 - [Vue.js 3](https://vuejs.org) - Framework
@@ -49,14 +47,14 @@ functionality about halfway through the creation of the builder and I wish I had
 done it sooner, because my debugging would have gone far smoother.
 
 A few smaller notes I took included:
-- **Organizing imports.** This project has a *ton* of components. I came up with 
+- **Organizing imports.** This project has a *ton* of components. I came up with
   a scheme and began optimizing my imports so I could find where I included a
   component from easier. I've since taken this approach with other projects and
   it's a really helpful technique to use.
 - **Using `<template>` for complex component logic.** The usage of `<template>`
   in Vue makes complex conditionals in components way easier to read and
   understand, and given the complex, data oriented nature of this project I was
-  doing this often.  
+  doing this often.
 
-[file_numConversion.ts]: https://github.com/Studio-Archetype/HUI-Builder/blob/master/src/lib/numConversion.ts
-[file_EditorCanvas.vue_l237]: https://github.com/Studio-Archetype/HUI-Builder/blob/master/src/components/EditorCanvas.vue#L237
+[file_numConversion.ts]: https://github.com/Studio-Archetype/HUI-Builder/blob/a3e67a2492408e32ef595953af1d8bc98a3d7c3e/src/lib/numConversion.ts
+[file_EditorCanvas.vue_l237]: https://github.com/Studio-Archetype/HUI-Builder/blob/a3e67a2492408e32ef595953af1d8bc98a3d7c3e/src/components/EditorCanvas.vue#L237

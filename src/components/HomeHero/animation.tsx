@@ -167,7 +167,7 @@ export const ShapesAnimationCanvas: FC = () => {
     if (amount <= 0) return;
     newSprite();
     new Promise((resolve) => setTimeout(resolve, randInt(100, 1000))).then(() =>
-      initSprites(amount - 1)
+      initSprites(amount - 1),
     );
   };
 
@@ -184,7 +184,7 @@ export const ShapesAnimationCanvas: FC = () => {
     // Remove sprites and schedule new ones outside the render loop
     if (spritesToRemove.length > 0) {
       setSprites((prev) =>
-        prev.filter((sprite) => !spritesToRemove.includes(sprite.id))
+        prev.filter((sprite) => !spritesToRemove.includes(sprite.id)),
       );
       spritesToRemove.forEach(() => {
         setTimeout(() => newSprite(), randInt(100, 1000));

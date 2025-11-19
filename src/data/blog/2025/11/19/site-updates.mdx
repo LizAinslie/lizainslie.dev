@@ -1,0 +1,40 @@
+---
+title: Updates to this site
+summary: Updating old code one step at a time
+date: 2025-11-19
+tags:
+  - tech
+---
+
+import MdProjectCard from '../../../../../components/MdProjectCard.astro';
+
+import { ShapesAnimationCanvas } from '../../../../../components/HomeHero/animation';
+
+While I was writing [yesterday's post](/blog/2025/11/18/2025-update), I wanted
+to clean up some code and update the site to incorporate [Astro][astro]'s.
+latest features.
+
+## Content Collections & MDX
+I started by refactoring the [blog](/blog) and [projects](/projects) to use
+Astro's [Content Collections][astro_cc]. This was a great undertaking, and it
+allowed me to streamline the content management process. I did this mainly
+because I wanted to leverage MDX for the ability to include components in posts.
+
+Like this!
+
+<MdProjectCard project="timezonedb" />
+
+## Homepage & Animation
+A few months ago, I refactored the homepage animation to be bound to react, for
+maintainability's sake. This was another great undertaking, and it allowed me to
+maintain the code powering the animation much more easily, as it is all
+typescript now instead of pure javascript.
+
+Here's the animation (it's a component now!):
+
+<div className="relative rounded-md bg-[#a97594] h-[30vh]">
+    <ShapesAnimationCanvas client:only />
+</div>
+
+[astro]: https://astro.build/
+[astro_cc]: https://docs.astro.build/en/guides/content-collections/

@@ -1,11 +1,9 @@
 ---
-layout: ../../layouts/project.astro
 title: TimezoneDB
-site: https://tzdb.synapsetech.dev
 image: https://i-work-at-the.cocaine.institute/Lizzy63150e6dbvK1JpdSG85R.png
 github: SynapseTech/TimezoneDB
 description: |
-  I wrote a timezone sharing service named TimezoneDB
+  I wrote a timezone sharing service similar to PronounDB
 tags:
   - dev
   - frontend
@@ -42,8 +40,8 @@ to successfully implement this service.
 A large part of the data in TimezoneDB depends on having accounts linked, but I
 also wanted to allow users to use their accounts for login. The problem I faced
 was the server didn't know whether or not to link the accounts or just log in,
-and I had to add a query parameter to indicate link state, then persist that
-through the authentication flow of requests.
+and I had to add a query parameter to indicate whether or not the user is
+linking accounts, then persist that through the authentication flow.
 
 ### DOM Manipulation
 DOM manipulation in a browser extension is difficult. I had to figure out how
