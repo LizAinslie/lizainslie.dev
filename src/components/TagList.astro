@@ -1,0 +1,19 @@
+---
+interface Props {
+    tags: string[];
+}
+
+const { tags } = Astro.props;
+---
+
+{
+    tags.map((tag, index) => (
+        <>
+            <a
+                href={`/blog/tags/${tag}`}
+                class="mx-1 hover:underline hover:text-gray-200"
+            >{tag}</a>
+            {index < tags.length - 1 && " · "}
+        </>
+    ))
+}

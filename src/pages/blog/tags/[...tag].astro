@@ -1,11 +1,33 @@
 ---
-import BlogPostEntry from "../../components/BlogPostEntry.astro";
-import Footer from "../../components/Footer";
-import MainHead from "../../components/MainHead.astro";
-import NavHero from "../../components/NavHero";
-import { getCollection } from "astro:content";
+import MainHead from "../../../components/MainHead.astro";
+import NavHero from "../../../components/NavHero/index.jsx";
+import readingTime from "reading-time";
+import Footer from "../../../components/Footer";
+import dateFormat from "dateformat";
+import { getCollection, render } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import BlogPostEntry from "../../../components/BlogPostEntry.astro";
 
-const allPosts = (await getCollection("blog"))
+export async function getStaticPaths() {
+    const posts = await getCollection("blog");
+    const tags = new Set(posts.map((post) => post.data.tags ?? []).flat());
+    return Array.from(tags).map((tag) => ({
+        params: { tag },
+        props: {
+            tag,
+            posts: posts.filter((post) => post.data.tags?.includes(tag)),
+        },
+    }));
+}
+
+interface Props {
+    tag: string;
+    posts: CollectionEntry<"blog">[];
+}
+
+const { tag, posts } = Astro.props;
+
+const allPosts = posts
     .sort((a, b) => a.data.date.getTime() - b.data.date.getTime())
     .reverse();
 ---
@@ -13,7 +35,7 @@ const allPosts = (await getCollection("blog"))
 <html lang="en">
     <head>
         <MainHead
-            title="Blog | Liz Ainslie"
+            title={`Blog: ${tag} | Liz Ainslie`}
             description="Liz Ainslie: Freelance & Hobbyist Full Stack Developer"
         />
     </head>
@@ -28,7 +50,7 @@ const allPosts = (await getCollection("blog"))
                         Blog
                     </h1>
                     <p class="text-2xl mt-4 text-white">
-                        My writing about various topics
+                        My writing about {tag}
                     </p>
                 </div>
             </NavHero>

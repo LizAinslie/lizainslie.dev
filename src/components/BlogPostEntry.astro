@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from "astro:content";
+import dateFormat from "dateformat";
+import TagList from "./TagList.astro";
+
+interface Props {
+    post: CollectionEntry<"blog">;
+}
+
+const { post } = Astro.props;
+---
+
+<div class="postItem">
+    <h2 class="text-3xl">
+        <a href={`/blog/${post.id}`} class="hover:underline">
+            {post.data.title}
+        </a>
+    </h2>
+    {
+        post.data.summary && (
+            <p class="mt-2 leading-relaxed">{post.data.summary}</p>
+        )
+    }
+    <p class="mt-4 text-gray-400">
+        <span class="mr-1">{dateFormat(post.data.date, "UTC:mmm d, yyyy")}</span>
+        {post.data.tags && <>&middot; <TagList tags={post.data.tags} /></s>}
+    </p>
+</div>

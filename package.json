@@ -10,11 +10,11 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^4.3.11",
-    "@astrojs/react": "^4.4.0",
+    "@astrojs/mdx": "^4.3.13",
+    "@astrojs/react": "^4.4.2",
     "@astrojs/tailwind": "^6.0.2",
     "@types/dateformat": "^5.0.3",
-    "astro": "^5.14.1",
+    "astro": "^5.16.5",
     "astro-robots-txt": "^0.3.12",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",

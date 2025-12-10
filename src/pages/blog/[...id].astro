@@ -5,6 +5,7 @@ import readingTime from "reading-time";
 import Footer from "../../components/Footer";
 import dateFormat from "dateformat";
 import { getCollection, render } from "astro:content";
+import TagList from "../../components/TagList.astro";
 
 export async function getStaticPaths() {
     const posts = await getCollection("blog");
@@ -27,63 +28,66 @@ const readTime = readingTime(post.body!);
         />
     </head>
     <body>
-        <NavHero>
-            <div
-                class="py-32 flex flex-col items-center text-center topography"
-                style="fill: #1e2329;"
-            >
-                <h1 class="font-display text-6xl font-light text-white">
-                    {post.data.title}
-                </h1>
-                <p class="text-2xl mt-4 text-white">
-                    {dateFormat(post.data.date, "UTC:mmm d, yyyy")} &middot; {
-                        readTime.text
-                    }
-                </p>
-                {
-                    post.data.tags && (
-                        <p class="mt-4 text-gray-400">
-                            {post.data.tags.join(" · ")}
-                        </p>
-                    )
-                }
-                {
-                    post.data.update && (
-                        <a
-                            href="#updates"
-                            class="mt-3 text-gray-300 font-bold text-sm hover:underline"
-                        >
-                            This post has updates!
-                        </a>
-                    )
-                }
-            </div>
-        </NavHero>
 
-        <div class="container mx-auto pt-8 md:pt-12">
-            <div class="flex">
-                <article class="content mb-12">
-                    <Content />
-                </article>
-                <aside
-                    class="hidden lg:block h-screen sticky top-0 min-w-fit max-w-[20%] p-4"
+        <div class="flex flex-col min-h-screen">
+            <NavHero>
+                <div
+                    class="py-32 flex flex-col items-center text-center topography"
+                    style="fill: #1e2329;"
                 >
-                    <div class="headingLinks">
-                        {
-                            headings.map((heading) => (
-                                <a
-                                    class="headingLink"
-                                    href={`#${heading.slug}`}
-                                >
-                                    {heading.text}
-                                </a>
-                            ))
+                    <h1 class="font-display text-6xl font-light text-white">
+                        {post.data.title}
+                    </h1>
+                    <p class="text-2xl mt-4 text-white">
+                        {dateFormat(post.data.date, "UTC:mmm d, yyyy")} &middot; {
+                            readTime.text
                         }
-                    </div>
-                </aside>
-            </div>
-        </div>
+                    </p>
+                    {
+                        post.data.tags && (
+                            <p class="mt-4 text-gray-400">
+                                <TagList tags={post.data.tags} />
+                            </p>
+                        )
+                    }
+                    {
+                        post.data.update && (
+                            <a
+                                href="#updates"
+                                class="mt-3 text-gray-300 font-bold text-sm hover:underline"
+                            >
+                                This post has updates!
+                            </a>
+                        )
+                    }
+                </div>
+            </NavHero>
 
-        <Footer />
+            <div class="container mx-auto pt-8 md:pt-12 flex-grow">
+                <div class="flex">
+                    <article class="content mb-12">
+                        <Content />
+                    </article>
+                    <aside
+                        class="hidden lg:block h-screen sticky top-0 min-w-fit max-w-[20%] p-4"
+                    >
+                        <div class="headingLinks">
+                            {
+                                headings.map((heading) => (
+                                    <a
+                                        class="headingLink"
+                                        href={`#${heading.slug}`}
+                                    >
+                                        {heading.text}
+                                    </a>
+                                ))
+                            }
+                        </div>
+                    </aside>
+                </div>
+            </div>
+
+            <Footer />
+        </div>
     </body>
 </html>
