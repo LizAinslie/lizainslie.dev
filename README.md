@@ -4,7 +4,7 @@
 
 My portfolio, blog, and resume, hosted at https://lizainslie.dev.
 
-Built with [Astro](https://astro.build), [React](https://reactjs.org), and hosted by [Vercel](https://vercel.com)
+Built with [Astro](https://astro.build) & [React](https://reactjs.org).
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
